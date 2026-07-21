@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dictionary Application</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-book"></i>
+
+            <h2>Dictionary</h2>
+
+        </div>
+
+        <ul>
+
+            <li><i class="fa-solid fa-house"></i> Home</li>
+
+            <li><i class="fa-solid fa-magnifying-glass"></i> Search Word</li>
+
+            <li><i class="fa-solid fa-plus"></i> Add Word</li>
+
+            <li><i class="fa-solid fa-star"></i> Favorites</li>
+
+            <li><i class="fa-solid fa-clock-rotate-left"></i> History</li>
+
+            <li><i class="fa-solid fa-gear"></i> Settings</li>
+
+            <li><i class="fa-solid fa-circle-info"></i> About</li>
+
+            <li><i class="fa-solid fa-right-from-bracket"></i> Exit</li>
+
+        </ul>
+
+    </aside>
+
+    <!-- Main Content -->
+
+    <main class="main">
+
+        <header>
+
+            <h1>Dictionary Application</h1>
+
+            <!-- Search -->
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="word"
+                    placeholder="Search a word...">
+                <div id="suggestions" class="suggestions"></div>
+                <button id="searchBtn">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    Search
+
+                </button>
+
+                <button id="themeBtn">
+
+                    🌙 Dark Mode
+
+                </button>
+
+            </div>
+
+            <!-- Add Word -->
+
+            <div class="add-word-box">
+
+                <input
+                    type="text"
+                    id="newWord"
+                    placeholder="Enter New Word">
+
+                <input
+                    type="text"
+                    id="newMeaning"
+                    placeholder="Enter Meaning">
+
+                <button id="addBtn">
+
+                    <i class="fa-solid fa-plus"></i>
+
+                    Add Word
+
+                </button>
+
+            </div>
+            <div class="import-box">
+                <h3>Import Words</h3>
+
+                <input
+                    type="file"
+                    id="fileInput"
+                    accept=".txt">
+
+                <button id="importBtn">
+                    Import Words
+                </button>
+            </div>
+        </header>
+            <div class="update-word-box">
+
+                <input
+                    type="text"
+                    id="updateWord"
+                    placeholder="Word to Update">
+
+                <input
+                    type="text"
+                    id="updateMeaning"
+                    placeholder="New Meaning">
+
+                <button id="updateBtn">
+
+                    <i class="fa-solid fa-pen"></i>
+
+                    Update Word
+
+                </button>
+
+            </div>
+
+            <div class="delete-word-box">
+
+                <input
+                    type="text"
+                    id="deleteWord"
+                    placeholder="Enter Word to Delete">
+
+                <button id="deleteBtn">
+
+                    🗑 Delete Word
+
+                </button>
+
+            </div>
+        <!-- Cards -->
+
+        <section class="cards">
+
+            <!-- Meaning -->
+
+            <div class="card">
+
+                <h2>
+
+                    <i class="fa-solid fa-book-open"></i>
+
+                    Meaning
+
+                </h2>
+
+                <h3 id="displayWord">
+
+                    No Word Selected
+
+                </h3>
+
+                <p id="displayMeaning">
+
+                    Search a word to view its meaning.
+
+                </p>
+
+            </div>
+
+            <!-- Recent Searches -->
+
+            <div class="card">
+
+                <h2>
+
+                    <i class="fa-solid fa-clock"></i>
+
+                    Recent Searches
+
+                </h2>
+
+                <ul id="recentSearches">
+
+                </ul>
+
+            </div>
+
+            <!-- Favorites -->
+
+            <div class="card">
+
+                <h2>
+
+                    <i class="fa-solid fa-star"></i>
+
+                    Favorites
+
+                </h2>
+
+                <button id="favoriteBtn">
+
+                    ⭐ Add to Favorites
+
+                </button>
+
+                <ul id="favoriteList">
+
+                </ul>
+
+            </div>
+
+        </section>
+
+        <!-- Footer -->
+
+        <footer>
+
+            <p>
+
+                Total Words :
+                <span id="count">
+
+                    0
+
+                </span>
+
+            </p>
+
+            <p>
+
+                Date :
+                <span id="date">
+
+                </span>
+
+            </p>
+
+        </footer>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

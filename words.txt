@@ -1,0 +1,10 @@
+apple
+A sweet fruit
+cat
+A domestic animal
+dog
+A loyal animal
+book
+A collection of pages
+computer
+An electronic device
