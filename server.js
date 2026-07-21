@@ -14,15 +14,16 @@ const upload = multer({
     dest: "uploads/"
 });
 
+const path = require("path");
 // Serve Frontend
-app.use(express.static("public"));
+app.use(express.static(path.join(__dirname, "public")));
 
 // =========================
 // Home Route
 // =========================
 
 app.get("/", (req, res) => {
-    res.send("Dictionary Server is Running!");
+    res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
 // =========================
