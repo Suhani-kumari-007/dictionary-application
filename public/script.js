@@ -102,7 +102,7 @@ async function loadWordCount(){
     try{
 
         const response =
-        await fetch("http://localhost:3000/words");
+        await fetch("/words");
 
         const words =
         await response.json();
@@ -147,7 +147,7 @@ document
 
         const response =
         await fetch(
-        `http://localhost:3000/search/${word}`
+        `/search/${word}`
         );
 
         const displayWord =
@@ -243,7 +243,7 @@ searchInput.addEventListener("input", async function () {
     try {
 
         const response = await fetch(
-            `http://localhost:3000/suggest/${prefix}`
+            `/suggest/${prefix}`
         );
 
         const words = await response.json();
@@ -335,7 +335,7 @@ document
 
         const response =
         await fetch(
-        "http://localhost:3000/add",
+        "/add",
         {
 
             method:"POST",
@@ -393,7 +393,7 @@ importBtn.addEventListener("click", async () => {
 
     try {
 
-        const response = await fetch("http://localhost:3000/import", {
+        const response = await fetch("/import", {
             method: "POST",
             body: formData
         });
@@ -434,7 +434,7 @@ document.getElementById("updateBtn").addEventListener("click", async function ()
 
     try {
 
-        const response = await fetch("http://localhost:3000/update", {
+        const response = await fetch("/update", {
 
             method: "PUT",
 
@@ -502,7 +502,7 @@ document
 
         const response =
         await fetch(
-        `http://localhost:3000/delete/${word}`,
+        `/delete/${word}`,
         {
             method:"DELETE"
         });
