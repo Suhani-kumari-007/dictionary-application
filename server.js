@@ -351,6 +351,11 @@ app.get("/count", (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 
+app.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).send(err.message);
+});
+
 app.listen(PORT, () => {
 
     console.log(`Server running on port ${PORT}`);
